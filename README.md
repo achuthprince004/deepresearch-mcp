@@ -2,7 +2,7 @@
 
 A powerful Model Context Protocol (MCP) server that enables AI agents to perform structured, multi-step internet research and generate comprehensive reports automatically.
 
-Deep Research MCP equips Claude web only with advanced research capabilities including query planning, web search, content extraction, source analysis, and report generation.
+Deep Research MCP equips **Claude web only** with advanced research capabilities including query planning, web search, content extraction, source analysis, and report generation.
 
 Link for endpoint generation: https://deepresearch-mcp.vercel.app/
 
@@ -15,6 +15,11 @@ Link for endpoint generation: https://deepresearch-mcp.vercel.app/
 > The server supports end-to-end research workflows, including planning, web search, content extraction, source analysis, and report generation.
 >
 > The project is actively maintained and continues to evolve with new research features, improved performance, and enhanced reliability.
+>
+> Since this instance is deployed on **Render Free tier**, the first connection or tool call after 15 minutes of inactivity may take **30–90 seconds** (cold start).  
+>
+> Subsequent calls during an active session are much faster.  
+> This delay is normal for free hosting and mainly affects Claude when starting a new research task after a pause.
 
 ## Features
 
