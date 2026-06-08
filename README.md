@@ -1,49 +1,66 @@
 # Deep Research MCP
 
-A Model Context Protocol (MCP) server for deep internet research.
+A powerful Model Context Protocol (MCP) server that enables AI agents to perform structured, multi-step internet research and generate comprehensive reports automatically.
 
-## Installation
+Deep Research MCP equips **Claude web only** with advanced research capabilities including query planning, web search, content extraction, source analysis, and report generation.
 
-1. Clone this repository to your local machine.
-2. Create and activate a Python virtual environment:
-   ```bash
-   python -m venv venv
-   
-   # Windows
-   .\venv\Scripts\activate
-   
-   # macOS/Linux
-   source venv/bin/activate
-   ```
-3. Install the specific dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Set up the environment variables:
-   ```bash
-   cp .env.example .env
-   ```
+Link for endpoint generation: https://deepresearch-mcp.vercel.app/
 
-## Running the Server
+> [!IMPORTANT]
+>
+> **Current Status**
+>
+> Deep Research MCP is available as a **Remote MCP server** and is designed to provide advanced research capabilities through the Model Context Protocol.
+>
+> The server supports end-to-end research workflows, including planning, web search, content extraction, source analysis, and report generation.
+>
+> The project is actively maintained and continues to evolve with new research features, improved performance, and enhanced reliability.
+>
+> Since this instance is deployed on **Render Free tier**, the first connection or tool call after 15 minutes of inactivity may take **30–90 seconds** (cold start).  The same applies for the first connection in claude web connectors too.
+>
+> Subsequent calls during an active session are much faster.  
+>
+> This delay is normal for free hosting and mainly affects Claude when starting a new research task after a pause.
 
-### Stdio Mode (Cursor/VSCode)
-This is the default mode used by MCP clients if explicitly configured via a config file. See the provided `mcp.json.example` for details on how to configure your cursor or VSCode settings to point to this MCP integration.
+## Features
 
-### HTTP/SSE Mode
-To run the server over HTTP using Server-Sent Events (SSE):
+* Deep multi-step internet research
+* Research planning and task decomposition
+* Multi-provider web search
 
-```bash
-python run.py --http
-```
-The server will run at the `PORT` and `HOST` configured within your `.env` file (Default: http://127.0.0.1:8000).
+  * Tavily
+  * SerpAPI
+  * Google Search
+  * DuckDuckGo
+* Intelligent webpage scraping and extraction
+* LLM-powered source analysis using Groq
+* Automatic Markdown report generation
+* Research history and report storage
+* Remote MCP deployment support
+* Open-source and extensible architecture
 
-### Remote Access (with ngrok)
-If you are running the HTTP/SSE server locally but need to expose it securely to an external service, you can use `ngrok`.
+## MCP Capabilities
 
-1. Install and authenticate `ngrok`.
-2. Start the MCP server: `python run.py --http`
-3. Expose the port through ngrok (assuming port 8000):
-   ```bash
-   ngrok http 8000
-   ```
-4. Update your remote application to point to the secure `https` URL provided by ngrok.
+Deep Research MCP provides a complete research workflow through MCP tools and resources:
+
+* Generate structured research plans
+* Execute iterative web searches
+* Extract and analyze webpage content
+* Gather and compare information from multiple sources
+* Synthesize findings into comprehensive reports
+* Store and retrieve research history
+* Generate Markdown-based research outputs
+
+The server is designed to help AI agents perform deeper, more reliable research by combining search, extraction, analysis, and reporting into a unified workflow.
+
+## Architecture
+
+Deep Research MCP follows a modular architecture that includes:
+
+* Search providers for information discovery
+* Content extraction and scraping components
+* LLM-powered analysis and synthesis
+* Report generation and storage
+* MCP tools and resources for agent interaction
+
+This architecture makes it easy to extend the server with additional search providers, analysis capabilities, and research workflows.
