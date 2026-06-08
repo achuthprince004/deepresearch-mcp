@@ -1,0 +1,12 @@
+# Ignore generated research outputs
+research_history/
+
+# Local environment file
+.env
+
+# Python virtual environment
+venv/
+.temp_venv/
+node_modules/
+__pycache__/
+*.pyc

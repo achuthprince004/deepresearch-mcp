@@ -1,0 +1,9 @@
+fastmcp
+requests
+beautifulsoup4
+trafilatura
+markdown
+python-dotenv
+duckduckgo-search
+google-api-core
+googlesearch-python

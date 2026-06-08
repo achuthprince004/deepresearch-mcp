@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "deepresearch": {
+      "command": "python",
+      "args": [
+        "run.py"
+      ],
+      "env": {}
+    }
+  }
+}
